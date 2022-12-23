@@ -1,0 +1,110 @@
+.navigation {
+  margin: 0;
+  padding: 0;
+}
+.navigation__links {
+  margin: 0;
+  padding: 0;
+}
+.navigation__links_route_main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  gap: 30px;
+}
+.navigation__links_route_movies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: .3s;
+}
+.navigation__link:hover {
+  opacity: .6;
+}
+.navigation__link_color_white {
+  color: #fff;
+}
+.navigation__link_color_black {
+  color: #000;
+}
+.navigation__link_content_register {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.navigation__link_content_films {
+  margin-right: 20px;
+}
+.navigation__link_content_savedFilms {
+  margin-right: 50px;
+}
+.navigation__button {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+.navigation__button_type_signin {
+  width: 76px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #2BE080;
+  color: #000;
+}
+.navigation__button_type_profile {
+  width: 100px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  color: #000;
+}
+.navigation__button_type_menu {
+  margin: 0;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  background-image: url(../../images/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  background-color: transparent;
+  display: none;
+  transition: .3s;
+  cursor: pointer;
+}
+.navigation__button_type_menu:hover {
+  opacity: .6;
+}
+/* media */
+@media screen and (max-width: 1279px) {
+  .navigation__links {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .navigation__button_type_menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navigation__link_content_register {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navigation__button_type_menu {
+    width: 40px;
+    height: 43px;
+  }
+}

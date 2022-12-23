@@ -1,0 +1,32 @@
+.navTab {
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  height: 66px;
+  display: flex;
+  
+}
+.navTab__link {
+  text-decoration: none;
+  transition: .3s;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+ 
+}
+.navTab__links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navTab__link:hover {
+  opacity: .6;
+}
