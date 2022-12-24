@@ -11,7 +11,7 @@ function SearchForm (){
         </div>
         <div className="searchForm__switchGroup">
           <label className="searchForm__switch">
-            <input name="shortFilm" type="checkbox" className="searchForm__checkbox" checked/>
+            <input name="shortFilm" type="checkbox" className="searchForm__checkbox" />
             <span className="searchForm__switchDecorator"></span>
           </label>
           <p className="searchForm__shortFilms">Короткометражки</p>
