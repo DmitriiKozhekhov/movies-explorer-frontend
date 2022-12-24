@@ -113,10 +113,10 @@
   transition: .4s;
 }
 .searchForm__checkbox:checked + .searchForm__switchDecorator {
-  background-color: #3DDC84;
+  background-color: #343434;
 }
 .searchForm__checkbox:checked + .searchForm__switchDecorator:before {
-  background-color: #FFFFFF;
+  background-color: #2be080;
   transform: translateX(16px);
 }
 /* media */
