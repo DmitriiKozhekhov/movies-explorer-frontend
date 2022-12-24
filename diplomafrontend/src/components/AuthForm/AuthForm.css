@@ -45,16 +45,17 @@
 }
 .authForm__input {
   border: 0;
+  border-bottom: 1px solid #424242;
   width: 100%;
   height: 46px;
   margin: 10px 0 0;
-  padding: 0 0 0 15px;
+  padding: 0;
   box-sizing: border-box;
   font-size: 13px;
   line-height: 16px;
   font-weight: normal;
   border-radius: 8px;
-  background-color: #2F2F2F;
+  background-color: #202020;
   color: #FFFFFF;
 }
 .authForm__input:invalid {
