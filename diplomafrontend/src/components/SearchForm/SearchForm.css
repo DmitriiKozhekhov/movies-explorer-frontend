@@ -1,6 +1,6 @@
 .searchForm {
   margin: 0 auto;
-  padding: 154px 0 83px;
+  padding: 154px 0 0;
   box-sizing: border-box;
   width: calc(100% - 2*70px);
   height: calc(222px + 74px);
@@ -57,7 +57,7 @@
 }
 .searchForm__switchGroup {
   align-self: flex-start;
-  margin: 0;
+  margin: 0 0 47px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, max-content));
