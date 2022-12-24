@@ -1,13 +1,13 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 18px 70px;
   height: 74px;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
   top: 0;
-  justify-content: space-between;
-  align-items: center;
   background-color: transparent;
   margin: 0;
 }

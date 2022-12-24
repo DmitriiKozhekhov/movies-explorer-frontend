@@ -1,14 +1,14 @@
 .aboutProject {
   margin: 0;
   padding: 110px 70px;
+  background-color: #202020;
+  color: #FFFFFF;
   box-sizing: border-box;
-  background-color: #fff;
-  color: #000;
 }
 .aboutProject__header {
   margin: 0 0 70px;
   padding: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #DADADA;
 }
 .aboutProject__headerTitle {
   margin: 0 0 23px;
@@ -62,12 +62,14 @@
 .aboutProject__timelineBar_type_short {
   margin: 0;
   padding: 0;
-  background-color: #2BE080;
+  background-color: #3DDC84;
+  color: #000000;
 }
 .aboutProject__timelineBar_type_long {
   margin: 0;
   padding: 0;
-  background-color: #F2F2F2;
+  background-color: #303030;
+  color: #FFFFFF;
 }
 .aboutProject__timelineHeader {
   margin: 0;
@@ -84,7 +86,7 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
-  color: #A0A0A0;
+  color: #8B8B8B;
 }
 /* media */
 @media screen and (max-width: 1279px) {
@@ -108,6 +110,7 @@
     grid-template-columns: 140px auto;
   }
 }
+/* media */
 @media screen and (max-width: 767px) {
   .aboutProject {
     padding: 70px 18px;
@@ -149,16 +152,14 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .aboutProject__timelineCaption {
-    font-size: 11px;
-    line-height: 13px;
-  }
-}
-@media screen and (max-width: 767px) {
   .aboutProject__timelineHeader {
     font-size: 11px;
     line-height: 13px;
   }
 }
-
-
+@media screen and (max-width: 767px) {
+  .aboutProject__timelineCaption {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

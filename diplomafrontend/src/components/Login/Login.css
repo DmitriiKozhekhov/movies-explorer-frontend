@@ -4,20 +4,20 @@
   box-sizing: border-box;
 }
 .login__question {
+  text-align: center;
   font-size: 14px;
   line-height: 17px;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #8B8B8B;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 .login__link {
-  color: #3456F3;
-  transition: .3s;
-  cursor: pointer;
   margin: 0;
   padding: 0;
+  color: #4285F4;
+  transition: .3s;
+  cursor: pointer;
   text-decoration: none;
 }
 .login__link:hover {

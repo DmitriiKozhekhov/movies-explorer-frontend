@@ -1,14 +1,14 @@
 .promo {
+  margin: 0;
+  padding: 0;
+  height: calc(524px + 74px);
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #073042;
   background-image: url('../../../images/background-image.svg');
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0;
-  padding: 0;
-  height: calc(524px + 74px);
-  display: flex;
 }
 .promo__title {
   margin: 0;

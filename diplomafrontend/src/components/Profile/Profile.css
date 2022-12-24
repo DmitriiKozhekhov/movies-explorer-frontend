@@ -7,30 +7,29 @@
   flex-direction: column;
   align-items: center;
 }
-.profile__form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 calc(220px - 16px);
-  padding: 0;
-}
-.profile__formInputGroup {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #E8E8E8;
-  margin: 0;
-  padding: 16px 0;
-  height: 14px;
-}
 .profile__title {
-  line-height: 29px;
-  font-weight: 500;
-  text-align: center;
   margin: 0 0 calc(123px - 16px);
   padding: 0;
   font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
 }
-
+.profile__form {
+  margin: 0 0 calc(220px - 16px);
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile__formInputGroup {
+  margin: 0;
+  padding: 16px 0;
+  height: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #424242;
+}
 .profile__formInputGroup:last-child {
   border: 0;
 }
@@ -42,46 +41,50 @@
   font-weight: 500;
 }
 .profile__formInput {
+  margin: 0;
+  padding: 0;
+  height: 14px;
   text-align: right;
   border: 0;
   font-size: 11px;
   line-height: 13px;
   font-weight: normal;
-  margin: 0;
-  padding: 0;
-  height: 14px;
+  background-color: #202020;
+  color: #FFFFFF;
 }
 .profile__buttonEdit {
-  line-height: 16px;
-  font-weight: normal;
-  text-align: center;
-  background-color: transparent;
-  transition: .3s;
-  cursor: pointer;
   margin: 0 0 16px;
   padding: 0;
   border: 0;
   font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  text-align: center;
+  background-color: transparent;
+  color: #FFFFFF;
+  transition: .3s;
+  cursor: pointer;
 }
 .profile__buttonEdit:hover {
   opacity: .6;
 }
 .profile__buttonLogout {
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-size: 13px;
   line-height: 16px;
   font-weight: 500;
   text-align: center;
-  color: #FF004D;
+  color: #EE3465;
   background-color: transparent;
   transition: .3s;
   cursor: pointer;
-  margin: 0;
-  padding: 0;
-  border: 0;
 }
 .profile__buttonLogout:hover {
   opacity: .6;
 }
+
 /* media */
 @media screen and (max-width: 1279px) {
   .profile {
@@ -106,3 +109,4 @@
     line-height: 15px;
   }
 }
+
