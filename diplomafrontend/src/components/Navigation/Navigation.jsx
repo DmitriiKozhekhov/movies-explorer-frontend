@@ -27,7 +27,7 @@ function Navigation() {
               <Link to="/movies" className="navigation__link navigation__link_content_films navigation__link_color_black">Фильмы</Link>
               <Link to="/saved-movies" className="navigation__link navigation__link_content_savedFilms navigation__link_color_black">Сохранённые фильмы</Link>
               <Link to="/profile" className="navigation__link ">
-                <button className="navigation__button navigation__button_type_profile">Аккаунт</button>
+                <button className="navigation__button navigation__button_type_profile"><div className='navigation__accountLogo'></div><p className='navigation__buttonText'>Аккаунт</p></button>
               </Link>
             </div>
           </Route>

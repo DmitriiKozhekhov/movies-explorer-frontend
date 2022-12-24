@@ -47,6 +47,11 @@
   border: 0;
   cursor: pointer;
 }
+.navigation__accountLogo {
+ background-image: url(../../images/humanlogo.svg);
+ height: 14px;
+ width: 12px;
+}
 .navigation__button_type_signin {
   width: 76px;
   height: 32px;
@@ -58,12 +63,19 @@
   color: #000;
 }
 .navigation__button_type_profile {
+  display: flex;
   width: 100px;
   height: 32px;
   border-radius: 20px;
   color: #fff;
   background-color: #202020;
   border: 2px solid #aaaaaa;
+  align-items: center;
+  gap: 7px;
+}
+.navigation__buttonText {
+  margin: 0;
+  padding: 0;
 }
 .navigation__button_type_menu {
   margin: 0;
