@@ -31,10 +31,9 @@
   padding: 0;
   width: 24px;
   height: 24px;
-  background-color: #F5F5F5;
+  background-color: #202020;
   border: 0;
-  border-radius: 50%;
-  background-image: url(../../images/like_active.png);
+  background-image: url(../../images/like_active.svg);
   background-repeat: no-repeat;
   transition: .3s;
   cursor: pointer;
@@ -46,7 +45,6 @@
 .moviesCard__bottom {
   margin: 0;
   padding: 0;
-  border-top: 1px solid #E8E8E8;
 }
 .moviesCard__duration {
   margin: 6px 0 0;
