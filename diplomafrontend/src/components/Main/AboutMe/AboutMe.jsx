@@ -15,7 +15,7 @@ function AboutMe (){
             Я родился в городе Магдебург, в Германии. Но живу в Нижнем Новогроде. Закончил НИУ ВШЭ по направлению производственный менеджмент и логистика. Работаю в консалтинге.
             Всегда было интересно изучить программирование, поэтому я в Яндекс.Практикум!
           </p>
-          <a href="https://github.com/DmitriiKozhekhov" className="aboutMe__gitHub" >GitHub</a>
+          <a href="https://github.com/DmitriiKozhekhov" className="aboutMe__gitHub" target="_blank" rel="noreferrer">GitHub</a>
         </div>
         <div className="aboutMe__photo"></div>
       </div>

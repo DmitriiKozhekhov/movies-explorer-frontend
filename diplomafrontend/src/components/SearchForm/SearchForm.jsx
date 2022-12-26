@@ -4,16 +4,16 @@ function SearchForm (){
   return(
     <section className="searchForm">
       <div className="searchForm__main">
-        <div className="searchForm__inputGroup">
+        <form className="searchForm__inputGroup">
           <input type="text" className="searchForm__input" placeholder="Фильм"/>
           <button className="searchForm__searchButton"></button>
-        </div>
+        </form>
         <div className="searchForm__switchGroup">
+        <p className="searchForm__shortFilms">Короткометражки</p>
           <label className="searchForm__switch">
             <input name="shortFilm" type="checkbox" className="searchForm__checkbox" />
             <span className="searchForm__switchDecorator"></span>
           </label>
-          <p className="searchForm__shortFilms">Короткометражки</p>
         </div>
       </div>
     </section>

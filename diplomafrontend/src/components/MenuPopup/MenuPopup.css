@@ -1,7 +1,9 @@
 .menuPopup {
   margin: 0;
   padding: 0;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
   text-align: center;
   display: none;
   z-index: 1;
@@ -56,6 +58,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  background-color: #202020;
 }
 .menuPopup__links {
   margin: 0;

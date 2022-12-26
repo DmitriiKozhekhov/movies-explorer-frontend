@@ -6,7 +6,7 @@ function SavedMovies (){
   return(
     <main className="savedMovies">
       <SearchForm />
-      <MoviesCardList />
+      <MoviesCardList savedList={true}/>
     </main>
   )
 }
