@@ -1,6 +1,6 @@
 .profile {
   margin: 0 auto;
-  padding: 148px 0 0;
+  padding: 74px 0 70px;
   box-sizing: border-box;
   width: 410px;
   display: flex;
@@ -88,13 +88,13 @@
 /* media */
 @media screen and (max-width: 1279px) {
   .profile {
-    padding: calc(236px + 74px) 0 269px;
+    padding: 236px 0 269px;
   }
 }
 @media screen and (max-width: 767px) {
   .profile {
     max-width: 260px;
-    padding: 144px 0 40px;
+    padding: 70px 0 40px;
   }
 }
 @media screen and (max-width: 767px) {
