@@ -5,7 +5,7 @@ function SearchForm (){
     <section className="searchForm">
       <div className="searchForm__main">
         <form className="searchForm__inputGroup">
-          <input type="text" className="searchForm__input" placeholder="Фильм"/>
+          <input type="text" className="searchForm__input" placeholder="Фильм" required/>
           <button className="searchForm__searchButton"></button>
         </form>
         <div className="searchForm__switchGroup">

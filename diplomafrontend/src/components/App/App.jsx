@@ -16,22 +16,22 @@ function App() {
     <div className="page">
       <Switch>
         <Route exact path="/">
-          <Header  />
+          <Header main={true} />
           <Main />
           <Footer />
         </Route>
         <Route path="/movies">
-          <Header />
+          <Header main={false}/>
           <Movies />
           <Footer />
         </Route>
         <Route path="/saved-movies">
-          <Header />
+          <Header main={false}/>
           <SavedMovies />
           <Footer />
         </Route>
         <Route path="/profile">
-          <Header />
+          <Header main={false}/>
           <Profile />
         </Route>
         <Route path="/sign-up">

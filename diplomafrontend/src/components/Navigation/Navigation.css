@@ -3,11 +3,11 @@
   width: calc(100% - 38px - 44px);
   display: flex;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 .navigation__route_main {
   justify-content: flex-end;
 }
-
 .navigation__route_notMain {
   justify-content: space-between;
 }
@@ -110,7 +110,7 @@
 }
 /* media */
 @media screen and (max-width: 768px) {
-  .navigation__links {
+  .navigation__link_route_notMain {
     display: none;
   }
 }

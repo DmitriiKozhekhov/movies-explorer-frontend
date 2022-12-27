@@ -2,6 +2,7 @@
   margin: 0;
   padding: 79px 70px 20px;
   box-sizing: border-box;
+  width: calc(100% - 140px);
 }
 .footer__title {
   margin: 0 0 20px;
@@ -61,10 +62,12 @@
 @media screen and (max-width: 1279px) {
   .footer {
     padding: 79px 30px 20px;
+    width: calc(100% - 60px);
   }
 }
 @media screen and (max-width: 767px) {
   .footer {
+    width: calc(100% - 20px);
     padding: 79px 10px 20px;
     display: flex;
     flex-direction: column;

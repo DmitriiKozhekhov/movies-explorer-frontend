@@ -7,11 +7,15 @@
   width: 100%;
   max-width: 1280px;
   box-sizing: border-box;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   background-color: transparent;
   margin: 0;
   gap: 44px;
+  background-color: #202020;
+}
+.header_adress_main {
+  background-color: #073042;
 }
 .header__logo {
   height: 38px;

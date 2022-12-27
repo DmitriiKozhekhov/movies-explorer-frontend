@@ -3,7 +3,7 @@
   padding: 154px 0 0;
   box-sizing: border-box;
   width: calc(100% - 2*70px);
-  height: calc(222px + 74px);
+  height: 222px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,14 +161,12 @@
 
   }
 }
-
 @media screen and (max-width: 767px) {
   .searchForm__input {
     font-size: 18px;
     line-height: 22px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .searchForm__searchButton {
     margin: 0;
