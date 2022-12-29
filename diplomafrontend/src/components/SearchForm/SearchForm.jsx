@@ -6,10 +6,10 @@ function SearchForm (){
       <div className="searchForm__main">
         <form className="searchForm__inputGroup">
           <input type="text" className="searchForm__input" placeholder="Фильм" required/>
-          <button className="searchForm__searchButton"></button>
+          <button type="submit" className="searchForm__searchButton"></button>
         </form>
         <div className="searchForm__switchGroup">
-        <p className="searchForm__shortFilms">Короткометражки</p>
+          <p className="searchForm__shortFilms">Короткометражки</p>
           <label className="searchForm__switch">
             <input name="shortFilm" type="checkbox" className="searchForm__checkbox" />
             <span className="searchForm__switchDecorator"></span>

@@ -12,13 +12,13 @@ function Login (){
           <input type="email" name="email" id="email-input" className="authForm__input"
             value={"dmitrii@yandex.ru"}
             placeholder="E-mail" minLength="2" maxLength="30" required />
-          <p className="email-input-error authForm__error"></p>
+          <p className="authForm__error"></p>
 
           <label className="authForm__label" for="email-input">Пароль</label>
           <input type="password" name="password" id="password-input" className="authForm__input"
             value={"dmitrii"}
             placeholder="Пароль" required />
-          <p className="password-input-error authForm__error">Что-то пошло не так...</p>
+          <p className="authForm__error">Что-то пошло не так...</p>
         </div>
       </AuthForm>
       <p className="login__question">Ещё не зарегистрированы? <Link className="login__link" to="/sign-up">Регистрация</Link></p>

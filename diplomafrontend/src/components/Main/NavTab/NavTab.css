@@ -29,3 +29,9 @@
 .navTab__link:hover {
   opacity: .6;
 }
+
+@media screen and (max-width: 767px) {
+  .navTab__links {
+    gap: 24px;
+  }
+}

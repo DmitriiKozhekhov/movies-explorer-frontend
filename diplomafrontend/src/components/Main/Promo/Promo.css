@@ -21,7 +21,6 @@
 }
 @media screen and (max-width: 767px) {
   .promo__title {
-    max-width: 300px;
     font-size: 31px;
     line-height: 39px;
     letter-spacing: -0.04em;

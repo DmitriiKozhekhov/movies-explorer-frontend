@@ -3,7 +3,7 @@
   width: calc(100% - 38px - 44px);
   display: flex;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 .navigation__route_main {
   justify-content: flex-end;
