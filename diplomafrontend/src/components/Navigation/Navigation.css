@@ -5,10 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-.navigation__route_main {
+.navigation_route_main {
   justify-content: flex-end;
 }
-.navigation__route_notMain {
+.navigation_route_notMain {
   justify-content: space-between;
 }
 .navigation__links {

@@ -53,7 +53,7 @@
   background-image: url(../../images/like_active.svg);
   background-color: #222222;
 }
-.moviesCard__hider {
+.moviesCard_hider {
   display: none;
 }
 .moviesCard__deleteButton {

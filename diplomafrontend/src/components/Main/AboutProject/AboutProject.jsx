@@ -17,13 +17,13 @@ function AboutProject (){
         </div>
       </div>
       <div className="aboutProject__timeline">
-        <div className="aboutProfect__oneWeek">
+        <div className="aboutProject__oneWeek">
           <div className="aboutProject__timelineBar aboutProject__timelineBar_type_short">
             <h3 className="aboutProject__timelineHeader ">1 неделя</h3>
           </div>
           <p className="aboutProject__timelineCaption">Back-end</p>
         </div>
-        <div className="aboutProfect__fourWeeks">
+        <div className="aboutProject__fourWeeks">
           <div className="aboutProject__timelineBar aboutProject__timelineBar_type_long">
             <h3 className="aboutProject__timelineHeader">4 недели</h3>
           </div>
