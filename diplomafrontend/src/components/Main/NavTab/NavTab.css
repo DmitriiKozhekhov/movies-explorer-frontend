@@ -35,3 +35,9 @@
     gap: 24px;
   }
 }
+
+@media screen and (width: 780px) {
+  .navTab {
+    width: 765px;
+  }
+}

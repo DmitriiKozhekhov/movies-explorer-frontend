@@ -163,3 +163,8 @@
     line-height: 13px;
   }
 }
+@media screen and (width: 780px) {
+  .aboutProject {
+    width: 765px;
+  }
+}

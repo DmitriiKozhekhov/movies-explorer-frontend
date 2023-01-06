@@ -45,7 +45,7 @@ function Navigation() {
               <Link to="/profile" className="navigation__link navigation__link_route_notMain">
                 <button className="navigation__button navigation__button_type_profile"><div className='navigation__accountLogo'></div><p className='navigation__buttonText'>Аккаунт</p></button>
               </Link>
-              <button className="navigation__menu navigation__button_type_menu" onClick={openMenu}></button>
+              <button className="navigation__button navigation__button_type_menu" onClick={openMenu}></button>
             <MenuPopup isOpen={isMenuPopupOpen} onClose={closeMenu} />
             </div>
           </Route>
@@ -58,7 +58,7 @@ function Navigation() {
             <Link to="/profile" className="navigation__link navigation__link_route_notMain">
               <button className="navigation__button navigation__button_type_profile"><div className='navigation__accountLogo'></div><p className='navigation__buttonText'>Аккаунт</p></button>
             </Link>
-            <button className="navigation__menu navigation__button_type_menu" onClick={openMenu}></button>
+            <button className="navigation__button navigation__button_type_menu" onClick={openMenu}></button>
             <MenuPopup isOpen={isMenuPopupOpen} onClose={closeMenu} />
           </div>
           </Route>

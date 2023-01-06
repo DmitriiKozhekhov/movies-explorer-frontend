@@ -61,3 +61,8 @@
     padding: 40px 10px 0px;
   }
 }
+@media screen and (width: 780px) {
+  .moviesCardList {
+    width: 765px;
+  }
+}

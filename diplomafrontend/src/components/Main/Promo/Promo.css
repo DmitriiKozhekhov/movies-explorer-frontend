@@ -9,6 +9,7 @@
   background-image: url('../../../images/background-image.svg');
   background-repeat: no-repeat;
   background-position: center;
+  /* border: 1px, solid, red; */
 }
 .promo__title {
   margin: 0;
@@ -30,5 +31,10 @@
 @media screen and (max-width: 767px) {
   .promo {
     background-size: 248px;
+  }
+}
+@media screen and (width: 780px) {
+  .promo {
+    width: 765px;
   }
 }

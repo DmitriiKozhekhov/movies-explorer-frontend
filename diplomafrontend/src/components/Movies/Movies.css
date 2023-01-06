@@ -5,3 +5,8 @@
   flex-direction: column;
   align-items: center;
 }
+@media screen and (width: 780px) {
+  .movies {
+    width: 765px;
+  }
+}

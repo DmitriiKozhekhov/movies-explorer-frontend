@@ -56,6 +56,9 @@
 .moviesCard_hider {
   display: none;
 }
+.moviesCard__hider {
+  display: none;
+}
 .moviesCard__deleteButton {
   background-color: #222222;
   background-image: url(../../images/close.svg);

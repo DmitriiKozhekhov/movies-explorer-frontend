@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0 70px 105px;
   color: #000000;
+  box-sizing: border-box;
 }
 .portfolio__title {
   margin: 0 0 31px;
@@ -97,5 +98,10 @@
   .portfolio__arrow {
     font-size: 18px;
     line-height: 28px;
+  }
+}
+@media screen and (width: 780px) {
+  .portfolio {
+    width: 765px;
   }
 }
