@@ -1,0 +1,112 @@
+.profile {
+  margin: 0 auto;
+  padding: 74px 0 70px;
+  box-sizing: border-box;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile__title {
+  margin: 0 0 calc(123px - 16px);
+  padding: 0;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
+}
+.profile__form {
+  margin: 0 0 calc(220px - 16px);
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile__formInputGroup {
+  margin: 0;
+  padding: 16px 0;
+  height: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #424242;
+}
+.profile__formInputGroup:last-child {
+  border: 0;
+}
+.profile__formInputLabel {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 500;
+}
+.profile__formInput {
+  margin: 0;
+  padding: 0;
+  height: 14px;
+  text-align: right;
+  border: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+  background-color: #202020;
+  color: #FFFFFF;
+}
+.profile__buttonEdit {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  text-align: center;
+  background-color: transparent;
+  color: #FFFFFF;
+  transition: .3s;
+  cursor: pointer;
+}
+.profile__buttonEdit:hover {
+  opacity: .6;
+}
+.profile__buttonLogout {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #EE3465;
+  background-color: transparent;
+  transition: .3s;
+  cursor: pointer;
+}
+.profile__buttonLogout:hover {
+  opacity: .6;
+}
+
+/* media */
+@media screen and (max-width: 1279px) {
+  .profile {
+    padding: 236px 0 269px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile {
+    max-width: 260px;
+    padding: 70px 0 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile__buttonEdit {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile__buttonLogout {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
