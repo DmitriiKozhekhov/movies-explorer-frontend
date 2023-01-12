@@ -172,8 +172,8 @@
 }
 @media screen and (max-width: 767px) {
   .aboutMe__photo {
-    width: 292px;
-    height: 352px;
+    /* width: 292px;
+    height: 352px; */
     order: -1;
   }
 }

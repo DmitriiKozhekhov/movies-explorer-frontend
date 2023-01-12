@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   /* border: 1px, solid, red; */
+  /* outline: red; */
 }
 .promo__title {
   margin: 0;
@@ -18,19 +19,20 @@
   text-align: center;
   font-weight: normal;
   color: #fff;
+  letter-spacing: -0.04em;
 }
 @media screen and (max-width: 767px) {
   .promo__title {
     font-size: 31px;
     line-height: 39px;
     letter-spacing: -0.04em;
-    width: 300px;
+    /* max-width: 292px; */
   }
 }
 @media screen and (max-width: 767px) {
   .promo {
     background-size: 248px;
-    padding: 0 10px;
-    box-sizing: border-box;
+    /* padding: 0 10px;
+    box-sizing: border-box; */
   }
 }
