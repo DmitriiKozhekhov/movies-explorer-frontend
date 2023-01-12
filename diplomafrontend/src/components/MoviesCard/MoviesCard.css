@@ -63,6 +63,10 @@
   background-color: #222222;
   background-image: url(../../images/close.svg);
   display: none;
+  width:6.84px;
+  height:6.72px;
+  top:11.58px;
+  left:11.58px;
 }
 
 .moviesCard__like:hover {

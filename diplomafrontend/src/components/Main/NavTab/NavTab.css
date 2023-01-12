@@ -29,13 +29,13 @@
 .navTab__link:hover {
   opacity: .6;
 }
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .navTab__links {
     gap: 24px;
   }
-}
-@media screen and (width: 780px) {
+} */
+/* @media screen and (width: 780px) {
   .navTab {
     width: 765px;
   }
-}
+} */
