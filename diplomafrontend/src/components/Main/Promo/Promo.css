@@ -1,6 +1,5 @@
 .promo {
   margin: 0;
-  padding: 0;
   height: 524px;
   display: flex;
   justify-content: center;
@@ -25,16 +24,13 @@
     font-size: 31px;
     line-height: 39px;
     letter-spacing: -0.04em;
+    width: 300px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .promo {
     background-size: 248px;
-  }
-}
-@media screen and (width: 780px) {
-  .promo {
-    width: 765px;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 }

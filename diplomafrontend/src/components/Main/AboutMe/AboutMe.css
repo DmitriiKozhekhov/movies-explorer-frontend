@@ -120,7 +120,7 @@
 /* media */
 @media screen and (max-width: 767px) {
   .aboutMe {
-    padding: 70px 14px;
+    padding: 60px 14px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -167,6 +167,7 @@
     margin: 0 0 40px;
     font-size: 11px;
     line-height: 16px;
+    
   }
 }
 @media screen and (max-width: 767px) {
