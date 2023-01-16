@@ -1,0 +1,138 @@
+.moviesCard {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  width: 364px;
+  height: 281px;
+}
+.moviesCard:hover .moviesCard__deleteButton{
+  display: block;
+}
+.moviesCard__image {
+  background-image: url(../../images/A\ dog\ called\ money.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 0 10px;
+  width: 364px;
+  height: 203px;
+  padding: 0;
+}
+.moviesCard__nameLikeGroup {
+  margin: 0 16px 17px 16px;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  height: 30px;
+}
+.moviesCard__name {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.moviesCard__button {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  transition: .3s;
+}
+.moviesCard__like {
+  background-image: url(../../images/likeinActive.svg);
+  background-color: #222222;
+}
+.moviesCard__saved {
+  background-image: url(../../images/like_active.svg);
+  background-color: #222222;
+}
+.moviesCard_hider {
+  display: none;
+}
+.moviesCard__hider {
+  display: none;
+}
+.moviesCard__deleteButton {
+  background-color: #222222;
+  background-image: url(../../images/close.svg);
+  display: none;
+  width:6.84px;
+  height:6.72px;
+  top:11.58px;
+  left:11.58px
+}
+
+.moviesCard__like:hover {
+  opacity: .6;
+}
+.moviesCard__bottom {
+  margin: 0;
+  padding: 0;
+}
+.moviesCard__duration {
+  margin:  0 0 16px 16px;
+  padding: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+  color: #A0A0A0;
+}
+/* media */
+@media screen and (max-width: 1279px) {
+  .moviesCard {
+    width: 339px;
+    height: 262px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .moviesCard__image {
+    width: 339px;
+    height: 190px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .moviesCard {
+    width: 300px;
+    height: 237px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .moviesCardList__cards {
+    grid-template-columns: repeat(1, minmax(min-content, 1fr));
+    gap: 34px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .moviesCard__nameLikeGroup {
+    margin: 0 14px 7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .moviesCard__image {
+    width: 300px;
+    height: 168px;
+    margin: 0 0 7px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .moviesCard__name {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .moviesCard__duration {
+    font-size: 11px;
+    line-height: 13.31px;
+    margin:  0 0 14px 14px;
+
+  }
+}
