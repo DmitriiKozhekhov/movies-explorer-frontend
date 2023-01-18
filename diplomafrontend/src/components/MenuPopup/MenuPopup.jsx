@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import './MenuPopup.css';
+
 function MenuPopup({isOpen, onClose}) {
   return (
     <div className={`menuPopup ${isOpen && "menuPopup_open"}`}>

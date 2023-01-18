@@ -32,7 +32,9 @@
   transition: .3s;
   cursor: pointer;
 }
-
+.moviesCardList__moreButton_hidden {
+  display: none;
+}
 .moviesCardList__moreButton:hover {
   opacity: .6;
 }
@@ -61,8 +63,3 @@
     padding: 40px 0px 0px;
   }
 }
-/* @media screen and (width: 780px) {
-  .moviesCardList {
-    width: 765px;
-  }
-} */

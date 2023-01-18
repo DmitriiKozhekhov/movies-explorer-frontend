@@ -26,13 +26,10 @@
     font-size: 31px;
     line-height: 39px;
     letter-spacing: -0.04em;
-    /* max-width: 292px; */
   }
 }
 @media screen and (max-width: 767px) {
   .promo {
     background-size: 248px;
-    /* padding: 0 10px;
-    box-sizing: border-box; */
   }
 }

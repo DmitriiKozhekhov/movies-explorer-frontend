@@ -52,8 +52,11 @@
   background-color: #202020;
   color: #FFFFFF;
 }
+.profile__formInput_type_error {
+  color: #EE3465;
+}
 .profile__buttonEdit {
-  margin: 0 0 16px;
+  margin: 210px 0 16px;
   padding: 0;
   border: 0;
   font-size: 13px;
@@ -65,9 +68,26 @@
   transition: .3s;
   cursor: pointer;
 }
+
 .profile__buttonEdit:hover {
   opacity: .6;
 }
+.profile__error {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: normal;
+  margin: 10px 0 20px;
+  padding: 0;
+  color: #FF3055;
+}
+.profile__error_hidden {
+  display: none;
+}
+
+.profile__buttonEdit_inactive {
+  opacity: .4;
+}
+
 .profile__buttonLogout {
   margin: 0;
   padding: 0;
