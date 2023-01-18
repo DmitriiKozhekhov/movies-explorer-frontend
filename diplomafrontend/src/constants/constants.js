@@ -1,5 +1,5 @@
-// export const BASE_URL = 'https://api.kozhekhov.diploma.nomoredomains.club';
-export const BASE_URL = 'http://localhost:3100';
+export const BASE_URL = 'https://api.kozhekhov.diploma.nomoredomains.club';
+// export const BASE_URL = 'http://localhost:3100';
 export const shortFilmDuration = 40;
 export const moviesShow1280 = 12;
 export const moviesShow768 = 8;
