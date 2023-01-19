@@ -24,6 +24,9 @@
 .register__link:hover {
   opacity: .6;
 }
+.authForm__error_hidden {
+  display:none;
+}
 /* media */
 @media screen and (max-width: 1279px) {
   .register {
