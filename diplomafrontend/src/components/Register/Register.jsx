@@ -18,7 +18,7 @@ function Register ({onRegister}){
 
   return(
     <section className="register">
-      <AuthForm title="Добро пожаловать!" name="register" buttonText="Зарегистрироваться" onSubmit={handleSubmit} isValid={isValid}>
+      <AuthForm title="Добро пожаловать!" name="register" buttonText="Зарегистрироваться" onSubmit={handleSubmit} isValid={isValid} errors={errors}>
         <div className="authForm__children">
           <label className="authForm__label" htmlFor="name-input">Имя</label>
           <input type="name" name="name" id="name-input"
@@ -31,7 +31,7 @@ function Register ({onRegister}){
             className={`authForm__input ${errors.email ? 'authForm__input_type_error' : ''}`}
             value={values.email || ''} onChange={handleChange}
             placeholder="E-mail" minLength="2" maxLength="30" required />
-          <p className={`authForm__error ${isValid && "authForm__error_hidden"}`}>{errors.email || ''}</p>
+          <p className={`authForm__error ${!errors.email && "authForm__error_hidden"}`}>{errors.email || ''}</p>
 
           <label className="authForm__label" htmlFor="email-input">Пароль</label>
           <input type="password" name="password" id="password-input"

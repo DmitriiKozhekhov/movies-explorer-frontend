@@ -18,14 +18,14 @@ function Login ({onLogin}){
 
   return(
     <section className="login">
-      <AuthForm title="Рады видеть!" name="register" buttonText="Войти" onSubmit={handleSubmit} isValid={isValid} >
+      <AuthForm title="Рады видеть!" name="register" buttonText="Войти" onSubmit={handleSubmit} isValid={isValid} errors={errors}>
         <div className="authForm__children">
           <label className="authForm__label" htmlFor="email-input">E-mail</label>
           <input type="email" name="email" id="email-input"
             className={`authForm__input ${errors.email ? 'authForm__input_type_error' : ''}`}
             value={values.email || ''} onChange={handleChange}
             placeholder="E-mail" minLength="2" maxLength="30" required />
-          <p className={`authForm__error ${isValid && "authForm__error_hidden"}`}>{errors.email || ''}</p>
+          <p className={`authForm__error ${!errors.email && "authForm__error_hidden"}`}>{errors.email || ''}</p>
 
           <label className="authForm__label" htmlFor="email-input">Пароль</label>
           <input type="password" name="password" id="password-input"
