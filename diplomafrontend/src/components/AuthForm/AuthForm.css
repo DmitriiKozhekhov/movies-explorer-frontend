@@ -57,7 +57,7 @@
   background-color: #202020;
   color: #FFFFFF;
 }
-.authForm__input:invalid {
+.authForm__input_type_error {
   color: #EE3465;
 }
 .authForm__error {

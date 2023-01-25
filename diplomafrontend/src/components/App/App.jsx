@@ -45,6 +45,8 @@ function App() {
   const [popupError, setPopupError] = useState('');
   const [popupErrorMessage, setPopupErrorMessage] = useState('');
   const [screenWidth, setScreenWidth] = useState(document.documentElement.clientWidth);
+  const [allMovies, setAllMovies] = useState([]);
+
 
   function handleRegister(email, password, name) {
     return Auth.register(email, password, name)
@@ -124,61 +126,66 @@ function App() {
       });
   }
 
-  function handleSearchAllMovies(inputSearchValue) {
+  async function handleSearchAllMovies(inputSearchValue) {
 
     if (!inputSearchValue) {
       setPreloader(true);
       setPreloaderMessage('Нужно ввести ключевое слово');
       return;
     }
-
+      setPreloader(false);
       setPreloaderMessage('');
       localStorage.setItem('inputSearchValue', inputSearchValue);
       localStorage.setItem('shortMoviesStatus', shortMoviesStatus);
+      let foundMovies;
+      const allLocalMovies = JSON.parse(localStorage.getItem('allMovies'));
 
-      moviesApi.getMovies()
-        .then(setSpinPreloader(true))
-        .then((res) => {
-          setPreloader(false);
-          setPreloaderMessage('');
-          setSpinPreloader(false)
+      try{
+        setSpinPreloader(true)
+        if(allLocalMovies === null) {
+          const data = await moviesApi.getMovies();
+          setAllMovies(data);
+          localStorage.setItem('allMovies', JSON.stringify(data));
 
-          const foundMovies = res.filter(({ nameRU }) => nameRU.toLowerCase().includes(inputSearchValue.toLowerCase()));
-          localStorage.setItem('foundMovies', JSON.stringify(foundMovies)); 
+          foundMovies = data.filter(({ nameRU }) => nameRU.toLowerCase().includes(inputSearchValue.toLowerCase()));
+        } else {
+          foundMovies = allLocalMovies.filter(({ nameRU }) => nameRU.toLowerCase().includes(inputSearchValue.toLowerCase()));
+        }
 
-          if(foundMovies.length === 0) {
-            setPreloader(true);
-            setPreloaderMessage('Ничего не найдено');
-            localStorage.setItem('preloader', 'true');
-            localStorage.setItem('preloaderMessage', 'Ничего не найдено');
-          }
+        localStorage.setItem('foundMovies', JSON.stringify(foundMovies)); 
 
-          const shortFoundMovies = foundMovies.filter(movie => movie.duration <= shortFilmDuration);
-
-          const splicedMovies = foundMovies.splice(0, moviesCounter[0]);
-          setMoviesToShow(splicedMovies);
-          localStorage.setItem('moviesToShow', JSON.stringify(splicedMovies));
-
-          setExtraMovies(foundMovies);
-          localStorage.setItem('extraMovies', JSON.stringify(foundMovies));
-
-          const splicedShortMovies = shortFoundMovies.splice(0, moviesCounter[0]);
-          setShortMovies(splicedShortMovies);
-          localStorage.setItem('shortMovies', JSON.stringify(splicedShortMovies));
-
-          setExtraShortMovies(shortFoundMovies);
-          localStorage.setItem('extraShortMovies', JSON.stringify(shortFoundMovies));
-
-          if(!shortMoviesStatus) {
-            setShowedMovies(splicedMovies);
-            localStorage.setItem('showedMovies', JSON.stringify(splicedMovies));
-          } else {
-            setShowedMovies(splicedShortMovies);
-            localStorage.setItem('showedMovies', JSON.stringify(splicedShortMovies));
-          }
-        })
-        .catch((err) => {
-          console.log(err);
+            if(foundMovies.length === 0) {
+              setPreloader(true);
+              setPreloaderMessage('Ничего не найдено');
+              localStorage.setItem('preloader', 'true');
+              localStorage.setItem('preloaderMessage', 'Ничего не найдено');
+            }
+  
+            const shortFoundMovies = foundMovies.filter(movie => movie.duration <= shortFilmDuration);
+  
+            const splicedMovies = foundMovies.splice(0, moviesCounter[0]);
+            setMoviesToShow(splicedMovies);
+            localStorage.setItem('moviesToShow', JSON.stringify(splicedMovies));
+  
+            setExtraMovies(foundMovies);
+            localStorage.setItem('extraMovies', JSON.stringify(foundMovies));
+  
+            const splicedShortMovies = shortFoundMovies.splice(0, moviesCounter[0]);
+            setShortMovies(splicedShortMovies);
+            localStorage.setItem('shortMovies', JSON.stringify(splicedShortMovies));
+  
+            setExtraShortMovies(shortFoundMovies);
+            localStorage.setItem('extraShortMovies', JSON.stringify(shortFoundMovies));
+  
+            if(!shortMoviesStatus) {
+              setShowedMovies(splicedMovies);
+              localStorage.setItem('showedMovies', JSON.stringify(splicedMovies));
+            } else {
+              setShowedMovies(splicedShortMovies);
+              localStorage.setItem('showedMovies', JSON.stringify(splicedShortMovies));
+            }
+      } catch(err) {
+        console.log(err);
           setPreloaderMessage('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.');
 
           setMoviesToShow([]);
@@ -189,7 +196,12 @@ function App() {
           setExtraShortMovies([]);
 
           localStorage.clear();
-      });
+      } finally {
+        setSpinPreloader(false);
+        if(foundMovies.length > 0) {
+          setPreloader(false);
+          }
+      }
   }
 
   function handleSearchSavedMovies (inputSearchValue) {
@@ -262,7 +274,7 @@ function App() {
       '768': [moviesShow768, moviesMore768],
       '320': [moviesShow320, moviesMore320],
     };
-
+    
     Object.keys(moviesCounterConfig)
       .sort((a, b) => a - b)
       .forEach((key) => {
@@ -415,7 +427,7 @@ function App() {
       setPreloader(true);
       setPreloaderMessage('Ничего не найдено');
     }
-  }, [currentRoute.pathname, currentUser]);
+  }, [currentRoute.pathname, currentUser, allMovies]);
 
   useEffect(() => {
     setMoviesCount(handleCountMovies());
@@ -428,14 +440,14 @@ function App() {
     return () => {
       window.removeEventListener('resize', handleResize);
     }
-  }, [currentRoute.pathname, shortSavedMoviesStatus]);
+  }, [currentRoute.pathname, shortSavedMoviesStatus, allMovies, screenWidth]);
 
   useEffect(() => {
     if(currentRoute.pathname === '/saved-movies' && savedShowedMovies.length > 0) {
       setPreloader(false);
       setPreloaderMessage('');
     }
-  }, [currentRoute.pathname, handleCountMovies, savedShowedMovies]);
+  }, [currentRoute.pathname, handleCountMovies, savedShowedMovies, allMovies]);
   
   useEffect(() => {
     function checkToken() {
@@ -451,6 +463,9 @@ function App() {
     }
 
     checkToken();
+    if(!loggedIn) {
+      history.push('/');
+    }
   }, [])
 
 
@@ -460,7 +475,7 @@ function App() {
     <div className="page">
       <Switch>
         <Route exact path="/">
-          <Header main={true} />
+          <Header main={true} loggedIn={loggedIn}/>
           <Main />
           <Footer />
         </Route>

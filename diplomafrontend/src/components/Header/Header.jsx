@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import './Header.css';
 import Navigation from '../Navigation/Navigation';
-function Header({main}) {
+function Header({main, loggedIn}) {
   return (
     <header className={`header ${main ? "header_adress_main":''}`}>
       <Link to="/" className="header__logo" />
-      <Navigation />
+      <Navigation loggedIn={loggedIn}/>
     </header>
   )
 }

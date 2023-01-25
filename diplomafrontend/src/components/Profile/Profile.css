@@ -1,4 +1,4 @@
-.profile {
+ .profile {
   margin: 0 auto;
   padding: 74px 0 70px;
   box-sizing: border-box;
@@ -51,6 +51,10 @@
   font-weight: normal;
   background-color: #202020;
   color: #FFFFFF;
+  width: 85%;
+}
+.profile__formInput:focus {
+  outline: none;
 }
 .profile__formInput_type_error {
   color: #EE3465;
@@ -103,6 +107,17 @@
 }
 .profile__buttonLogout:hover {
   opacity: .6;
+}
+.profile__message {
+  margin: 50px 0 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 500;
+}
+
+.profile__message_hidden {
+  display: none;
 }
 
 /* media */
